@@ -1,0 +1,7 @@
+site_name: Base64
+nav:
+  - The Application: index.md
+  - API: api.md
+  - Links: links.md
+plugins:
+  - techdocs-core
