@@ -1,0 +1,34 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Base64-Api
+  description: Base64 Api service
+  tags:
+    - python
+    - fastapi
+    - api
+  links:
+    - url: https://fastapi-test.dev.tap-gitops.tanzu.dk/
+      title: Base Url
+      icon: dashboard
+    - url: https://fastapi-test.dev.tap-gitops.tanzu.dk/docs
+      title: Documentation
+      icon: dashboard
+  annotations:
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=base64
+spec:
+  type: service
+  lifecycle: experimental
+  owner: denmark-team
+  system: base64
+  providesApis:
+    - base64-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: base64
+  description: Base64 Application
+spec:
+  owner: denmark-team
+  domain: cloud-apps

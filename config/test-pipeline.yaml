@@ -1,0 +1,30 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: base64-pipeline
+  labels:
+    apps.tanzu.vmware.com/pipeline: base64-pipeline
+spec:
+  params:
+    - name: source-url
+    - name: source-revision
+  tasks:
+    - name: test
+      params:
+        - name: source-url
+          value: $(params.source-url)
+        - name: source-revision
+          value: $(params.source-revision)
+      taskSpec:
+        params:
+          - name: source-url
+          - name: source-revision
+        steps:
+          - name: encode-test
+            image: python:latest
+            script: |-
+              echo "* * * Dummy test passed * * *"
+          - name: decode-test
+            image: python:latest
+            script: |-
+              echo "* * * Dummy test passed * * *"

@@ -1,0 +1,30 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: base64-api
+  labels:
+    apps.tanzu.vmware.com/workload-type: server
+    app.kubernetes.io/part-of: base64
+    apis.apps.tanzu.vmware.com/register-api: "true"
+    apps.tanzu.vmware.com/has-tests: "true"
+  annotations:
+    autoscaling.knative.dev/minScale: "1"
+spec:
+  source:
+    git:
+      url: https://github.com/TanzuDK/base64.git
+      ref:
+        branch: main
+    subPath: api
+  params:
+    - name: api_descriptor
+      value:
+        type: openapi
+        location:
+          path: "/openapi.json"
+        system: base64
+        owner: denmark-team
+        description: "Base64 Api service"
+    - name: testing_pipeline_matching_labels
+      value:
+        apps.tanzu.vmware.com/pipeline: base64-pipeline
