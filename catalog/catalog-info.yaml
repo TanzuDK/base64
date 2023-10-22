@@ -11,11 +11,9 @@ metadata:
     - url: https://fastapi-test.dev.tap-gitops.tanzu.dk/
       title: Base Url
       icon: dashboard
-    - url: https://fastapi-test.dev.tap-gitops.tanzu.dk/docs
-      title: Documentation
-      icon: dashboard
   annotations:
     backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=base64
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   lifecycle: experimental
