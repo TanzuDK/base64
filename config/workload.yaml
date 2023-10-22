@@ -3,7 +3,7 @@ kind: Workload
 metadata:
   name: base64-api
   labels:
-    apps.tanzu.vmware.com/workload-type: web
+    apps.tanzu.vmware.com/workload-type: server
     app.kubernetes.io/part-of: base64
     apis.apps.tanzu.vmware.com/register-api: "true"
     apps.tanzu.vmware.com/has-tests: "true"
