@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: Base64-Api
   description: Base64 Api service
+  namespace: base64
   tags:
     - python
     - fastapi
