@@ -7,6 +7,9 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+# Hack for TAP to reconize openapi
+app.openapi_version = "3.0.0"
+
 origins = [
     "https://tap-gui.gke.tanzu.dk",
     "http://tap-gui.gke.tanzu.dk",
