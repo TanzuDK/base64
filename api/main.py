@@ -8,6 +8,8 @@ from pydantic import BaseModel
 app = FastAPI()
 
 origins = [
+    "https://tap-gui.gke.tanzu.dk",
+    "http://tap-gui.gke.tanzu.dk",
     "http://localhost",
     "http://localhost:5000",
 ]
