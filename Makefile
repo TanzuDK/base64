@@ -1,2 +1,2 @@
 run:
-	pipenv run uvicorn main:app --reload --static-dir="./api"
+	uvicorn main:app --reload --static-dir="./api"
