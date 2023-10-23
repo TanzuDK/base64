@@ -2,6 +2,7 @@
 import base64
 
 from fastapi import FastAPI
+from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -42,7 +43,8 @@ def encode_text(data: Data):
     source_value = source_value.encode("ascii")
     base64_bytes = base64.b64encode(source_value)
     base64_string = base64_bytes.decode("ascii")
-    return base64_string
+    dict_data["data"] = jsonable_encoder(base64_string)
+    return dict_data
 
 
 @app.post("/decode/")
@@ -53,4 +55,5 @@ def decode_text(data: Data):
     source_value = source_value.encode("ascii")
     base64_bytes = base64.b64decode(source_value)
     base64_string = base64_bytes.decode("ascii")
-    return base64_string
+    dict_data["data"] = jsonable_encoder(base64_string)
+    return dict_data

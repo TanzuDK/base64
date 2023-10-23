@@ -16,15 +16,10 @@ response = requests.post("http://localhost:8000/encode", json=payload)
 if response.status_code == 200:
     # The request was successful
     print("The data was encoded successfully!")
-    #encoded_data = response.json()["data"]
-    encoded_data = response.content.decode('utf-8')
-
-    # Remove the unwanted characters
-    clean_encoded_data = encoded_data[1:-1]
+    encoded_data = response.json()["data"]
     
-
     # Do something with the encoded data
-    print(clean_encoded_data)
+    print(encoded_data)
 else:
     # The request failed
     print("An error occurred while encoding the data:", response.status_code)
