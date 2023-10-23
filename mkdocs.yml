@@ -2,6 +2,7 @@ site_name: Base64
 nav:
   - The Application: index.md
   - API: api.md
+  - TESTS: tests.md
   - Links: links.md
 plugins:
   - techdocs-core
