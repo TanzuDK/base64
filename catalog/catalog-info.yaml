@@ -30,3 +30,26 @@ metadata:
 spec:
   owner: denmark-team
   domain: cloud-apps
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Base64-UI
+  description: Base64 UI
+  tags:
+    - python
+    - reflex
+  links:
+    - url: https://fastapi-test.dev.tap-gitops.tanzu.dk/
+      title: Base Url
+      icon: dashboard
+  annotations:
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=base64
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: experimental
+  owner: denmark-team
+  system: base64
+  consumesApis:
+    - base64-api

@@ -1,0 +1,1 @@
+web: reflex run --env prod --frontend-port 5000
