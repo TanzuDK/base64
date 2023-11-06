@@ -20,7 +20,7 @@ spec:
   owner: denmark-team
   system: base64
   providesApis:
-    - base64-api
+    - Base64-Api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: System
