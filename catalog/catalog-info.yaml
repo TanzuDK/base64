@@ -51,8 +51,7 @@ spec:
   lifecycle: experimental
   owner: denmark-team
   system: base64
-  consumesApis:
-    - Component:default/Base64-Api
-    - Component:base64/Base64-Api
+  dependsOn:
+    - component:default/Base64-Api
 
  
