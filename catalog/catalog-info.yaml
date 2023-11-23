@@ -8,8 +8,8 @@ metadata:
     - fastapi
     - api
   links:
-    - url: https://fastapi-test.dev.tap-gitops.tanzu.dk/
-      title: Base Url
+    - url: https://base64-api.base64.gke.tanzu.dk/docs
+      title: Swagger UI
       icon: dashboard
   annotations:
     backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=base64
@@ -39,9 +39,9 @@ metadata:
   description: Base64 UI
   tags:
     - python
-    - reflex
+    - Gradio
   links:
-    - url: https://fastapi-test.dev.tap-gitops.tanzu.dk/
+    - url: https://base64-ui.base64.gke.tanzu.dk
       title: Base Url
       icon: dashboard
   annotations:
