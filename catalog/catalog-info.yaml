@@ -40,6 +40,7 @@ metadata:
   tags:
     - python
     - gradio
+    - ui
   links:
     - url: https://base64-ui.base64.gke.tanzu.dk
       title: Base Url

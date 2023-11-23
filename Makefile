@@ -1,2 +1,5 @@
 run:
-	uvicorn main:app --reload --static-dir="./api"
+	docker compose up
+
+build:
+	docker compose build
