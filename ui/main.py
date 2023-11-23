@@ -1,8 +1,8 @@
+"""Frontend for the Base64 App"""
 import gradio as gr
 from func import Decode, Encode
 
 with gr.Blocks(title="Base64") as base64:
-    gr.HTML=("<h1>Base64</h1>")
     gr.Markdown("Base64 Encode and Decode app")
     with gr.Tab("Base64"):
         plain_text = gr.TextArea(lines=5, label="Plain Text")
@@ -16,4 +16,4 @@ with gr.Blocks(title="Base64") as base64:
 
 
 if __name__ == "__main__":
-    base64.launch(share=False, server_name="0.0.0.0", server_port=8080, show_api=False) 
+    base64.launch(share=False, server_name="0.0.0.0", server_port=8080, show_api=False)

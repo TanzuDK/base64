@@ -1,3 +1,4 @@
+"""Functions that call the Backend part of the Base64 App"""
 import json
 
 import requests
@@ -10,7 +11,7 @@ def Encode(data: str):
     headers = {"Content-Type": "application/json"}
     payload = json.dumps({"data": data})
 
-    response = requests.post(url, headers=headers, data=payload)
+    response = requests.post(url, headers=headers, data=payload, timeout=10)
 
     if response.status_code != 200:
         raise Exception(f"Error calling base64 API: {response.status_code}")
@@ -27,7 +28,7 @@ def Decode(data: str):
     headers = {"Content-Type": "application/json"}
     payload = json.dumps({"data": data})
 
-    response = requests.post(url, headers=headers, data=payload)
+    response = requests.post(url, headers=headers, data=payload, timeout=10)
 
     if response.status_code != 200:
         raise Exception(f"Error calling base64 API: {response.status_code}")
