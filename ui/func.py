@@ -9,7 +9,8 @@ def Encode(data: str):
     """Calls the base64 API with a string payload and returns the response."""
     api_host = os.environ['API_HOST']
     api_port = os.environ['API_PORT']
-    url = api_host + ":"+api_port + "/encode"
+    url = "http://base64-api:80/encode"
+    #url = api_host + ":"+api_port + "/encode"
     headers = {"Content-Type": "application/json"}
     payload = json.dumps({"data": data})
 
