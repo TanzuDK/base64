@@ -47,9 +47,6 @@ spec:
         branch: main
     subPath: ui
   params:
-    - name: dockerfile
-      value: ./Dockerfile
-      docker_build_context: ./ui
     - name: testing_pipeline_matching_labels
       value:
         apps.tanzu.vmware.com/pipeline: base64-pipeline
