@@ -17,6 +17,11 @@ spec:
         branch: main
     subPath: api
   params:
+    - name: ports
+      value:
+      - port: 80
+        containerPort: 8080
+        name: http
     - name: api_descriptor
       value:
         type: openapi
@@ -51,7 +56,7 @@ spec:
       ref:
         branch: main
     subPath: ui
-  params:
+  params:      
     - name: testing_pipeline_matching_labels
       value:
         apps.tanzu.vmware.com/pipeline: base64-pipeline
