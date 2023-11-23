@@ -1,6 +1,7 @@
 site_name: Base64
 nav:
   - The Application: index.md
+  - UI: ui.md
   - API: api.md
   - TESTS: tests.md
   - Links: links.md
