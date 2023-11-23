@@ -20,8 +20,8 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: ${{ secrets.AWS_REGION }}
       ENTITY_NAMESPACE: "default"
-      ENTITY_KIND: "Component"
-      ENTITY_NAME: "Base64-Api"
+      ENTITY_KIND: "system"
+      ENTITY_NAME: "base64"
       # In a Software template, Scaffolder will replace {{cookiecutter.component_id | jsonify}}
       # with the correct entity name. This is same as metadata.name in the entity's catalog-info.yaml
       # ENTITY_NAME: '{{ cookiecutter.component_id | jsonify }}'

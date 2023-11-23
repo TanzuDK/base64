@@ -27,6 +27,8 @@ kind: System
 metadata:
   name: base64
   description: Base64 Application
+  annotations:
+    backstage.io/techdocs-ref: dir:.
 spec:
   owner: denmark-team
   domain: cloud-apps
@@ -53,5 +55,3 @@ spec:
   system: base64
   dependsOn:
     - component:default/Base64-Api
-
- 

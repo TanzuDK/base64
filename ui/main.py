@@ -16,4 +16,4 @@ with gr.Blocks(title="Base64") as base64:
 
 
 if __name__ == "__main__":
-    base64.launch(share=False, server_name="0.0.0.0", server_port=8080) 
+    base64.launch(share=False, server_name="0.0.0.0", server_port=8080, show_api=False) 
