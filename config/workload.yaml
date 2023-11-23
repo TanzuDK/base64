@@ -40,6 +40,11 @@ metadata:
   annotations:
     autoscaling.knative.dev/minScale: "1"
 spec:
+  env:
+  - name: API_HOST
+    value: http://base64-api
+  - name: API_PORT
+    value: 8000
   source:
     git:
       url: https://github.com/TanzuDK/base64.git

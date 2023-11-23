@@ -5,10 +5,15 @@ services:
       context: ui/.
       dockerfile: Dockerfile
     container_name: ui
+    environment:
+    - API_HOST=http://api
+    - API_PORT=8000
     ports:
       - "8080:8080"
     networks:
       - base64
+    depends_on:
+      - api
   api:
     build:
       context: api/.
