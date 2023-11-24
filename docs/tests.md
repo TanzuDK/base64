@@ -29,3 +29,22 @@ make down
 ```
 
 cleans up the deployment.
+
+# Loadtest
+
+Loadtest is done using [Locust](https://docs.locust.io/en/stable/index.html) 
+
+Run 
+```
+make loadtest-cli
+```
+
+To do an automated test headless
+
+Run 
+```
+make loadtest-ui
+```
+
+To do an test using the UI.
+Note you need to open your browser to [http://localhost:8089/](http://localhost:8089/) and start it.
