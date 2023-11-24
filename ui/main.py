@@ -2,8 +2,11 @@
 import gradio as gr
 from func import Decode, Encode
 
-with gr.Blocks(title="Base64") as base64:
-    gr.Markdown("# Base64 Encode and Decode app")
+with gr.Blocks(theme=gr.themes.Base(),title="Base64") as base64:
+    gr.Markdown("""
+                # Base64 Encode and Decode app
+                Input your data in either of the boxes and click the relavant button.
+                """)
     with gr.Tab("Base64"):
         plain_text = gr.TextArea(
             lines=5,
@@ -25,7 +28,6 @@ with gr.Blocks(title="Base64") as base64:
         fn=Decode,
         inputs=encoded_text,
         outputs=plain_text)
-
 
 
 if __name__ == "__main__":
