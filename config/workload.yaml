@@ -45,12 +45,6 @@ metadata:
   annotations:
     autoscaling.knative.dev/minScale: "1"
 spec:
-  build:
-    env:
-      - name: API_HOST
-        value: "http://base64-api.base64"
-      - name: API_PORT
-        value: "80"
   env:
     - name: API_HOST
       value: "http://base64-api.base64"
