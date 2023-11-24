@@ -3,7 +3,7 @@ nav:
   - The Application: index.md
   - UI: ui.md
   - API: api.md
-  - TESTS: tests.md
+  - Tests: tests.md
   - Links: links.md
 plugins:
   - techdocs-core
