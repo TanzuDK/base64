@@ -1,21 +1,13 @@
 # Tests
 
-To the the application local, a Docker-Compose file is located in the root folder of the repo.
+You must have Docker installed, and be able to run [Docker Compose](https://docs.docker.com/compose/), to run the application locally.
 
-To build the entire app run
 
-```
-docker-compose build
-```
+Runing `make build` Builds the containers.
 
-To run the application
 
-```
-docker-compose u -d
-```
+Running `make up` runs the application, and it's avaliable at http://localhost:8080 for the frontend, and http://localhost:8000/docs for the backend swagger interface.
 
-To stop the application
+Run `CTRL + c` to exit out of the app.
 
-```
-docker-compose down
-```
+Runing `make down` cleans up the deployment.
