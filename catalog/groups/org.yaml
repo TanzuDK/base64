@@ -8,4 +8,4 @@ spec:
   profile:
     displayName: Base64 dev team
     email: base64@tanzu.dk
-  children: []
+  children: [robert-jensen]
