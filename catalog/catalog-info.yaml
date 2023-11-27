@@ -8,6 +8,5 @@ spec:
     - ./components/base64-api/base64-api.yaml
     - ./components/base64-ui/base64-ui.yaml
     - ./groups/org.yaml
-    - ./groups/org.yaml
     - ./systems/base64-system.yaml
 
