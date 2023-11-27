@@ -1,0 +1,11 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: base64
+  description: Base64 Application
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  owner: denmark-team
+  domain: cloud-apps

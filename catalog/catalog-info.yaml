@@ -1,56 +1,13 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Location
 metadata:
-  name: Base64-Api
-  description: Base64 Api service
-  tags:
-    - python
-    - fastapi
-    - api
-  links:
-    - url: https://base64-api.base64.gke.tanzu.dk/docs
-      title: Swagger UI
-      icon: dashboard
-  annotations:
-    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=base64
+  name: base64-catalog-info
+  description: "Catalog for the 'Base64' application"
 spec:
-  type: service
-  lifecycle: experimental
-  owner: denmark-team
-  system: base64
-  providesApis:
-    - Base64-Api
----
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: base64
-  description: Base64 Application
-  annotations:
-    backstage.io/techdocs-ref: dir:.
-spec:
-  owner: denmark-team
-  domain: cloud-apps
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: Base64-UI
-  description: Base64 UI
-  tags:
-    - python
-    - gradio
-    - ui
-  links:
-    - url: https://base64-ui.base64.gke.tanzu.dk
-      title: Base Url
-      icon: dashboard
-  annotations:
-    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=base64
-spec:
-  type: service
-  lifecycle: experimental
-  owner: denmark-team
-  system: base64
-  dependsOn:
-    - component:default/Base64-Api
+  targets:
+    - ./components/base64-api/base64-api.yaml
+    - ./components/base64-ui/base64-ui.yaml
+    - ./groups/org.yaml
+    - ./groups/org.yaml
+    - ./systems/base64-system.yaml
+

@@ -1,0 +1,23 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Base64-UI
+  description: Base64 UI
+  tags:
+    - python
+    - gradio
+    - ui
+  links:
+    - url: https://base64-ui.base64.gke.tanzu.dk
+      title: Base Url
+      icon: dashboard
+  annotations:
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/part-of=base64
+spec:
+  type: service
+  lifecycle: experimental
+  owner: denmark-team
+  system: base64
+  dependsOn:
+    - component:default/Base64-Api

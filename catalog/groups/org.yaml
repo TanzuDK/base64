@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: base64-team
+  description: The Base64 app team
+spec:
+  type: team
+  profile:
+    displayName: Base64 dev team
+    email: base64@tanzu.dk
+  children: []
