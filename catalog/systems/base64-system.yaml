@@ -7,5 +7,4 @@ metadata:
   annotations:
     backstage.io/techdocs-ref: dir:.
 spec:
-  owner: denmark-team
-  domain: cloud-apps
+  owner: base64-team
