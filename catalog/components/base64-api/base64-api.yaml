@@ -16,7 +16,7 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: denmark-team
+  owner: base64-team
   system: base64
   providesApis:
     - Base64-Api
